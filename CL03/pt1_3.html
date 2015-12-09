@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Layout_pt1_3</title>
+	<style type="text/css">
+		.frame{
+			width: 1000px; margin: 0px auto; background-color: #dddddd;
+		}
+		.frame>.box{
+			float: left; width: 300px; margin: 0px 15px;
+		}
+		@media screen and (max-width: 500px){
+			.frame{width: 320px;}
+		}
+	</style>
+</head>
+
+<body>
+
+<div class="frame">
+	<div class="box">Left</div>
+	<div class="box">Center</div>
+	<div class="box">Right</div>
+	<div style="clear:both">	</div>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Layout2</title>
+	<style type="text/css">
+		body{margin: 0px;}	/*邊邊不留白*/
+		.head{
+			background-color:#8899aa;
+		}
+		.frame{
+			/*background-color:#cccccc;*/
+			width:1000px;
+			/*text-align: center;*/ /*wrong alignment*/
+			margin-left: auto; margin-right: auto; /*margin:0px auto; */
+			text-align: center;
+		}
+
+		.left{
+			background-color: red;
+			display: inline-block;
+			width: 490px;
+			vertical-align: top;
+		}
+
+		.right{
+			background-color: blue;
+			display: inline-block;
+			width: 490px;
+			vertical-align: top;
+		}
+
+	</style>
+</head>
+<!-- BODY ======================================================================== -->
+<body>
+
+<div class="head">
+	<div class="frame">
+		<div class="left">
+			<ul>
+			    <li>Maze</li>
+			    <li>腦筋急轉彎</li>
+			    <li>魔戒</li>
+			</ul>
+		</div>
+		<div class="right">
+			<input type="text">
+			<input type="checkbox">
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+

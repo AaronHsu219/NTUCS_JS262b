@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Javascript_pt1</title>	
+	<script type="text/javascript">
+	
+	var n1 = prompt("請輸入一個數字", "");
+	var n2 = prompt("請輸入一個數字", "");
+	n1 = Number(n1);
+	n2 = Number(n2);
+	if (isNaN(n1)) { // 不正確的輸入，程式結束
+		alert("不正確的輸入");
+	} 
+	else if(isNaN(n2)){
+		alert("不正確的輸入");
+	}
+	else // 輸入正確，進行主程式
+	{
+		var op = prompt("想要做的運算:+,-,*,/", "");
+
+		if (op == '+') {
+			result = n1+n2;
+		} else if(op == '-'){
+			result = n1-n2;
+		}	else if(op == '*'){
+			result = n1*n2;
+		} else if(op == '/'){
+			result = n1/n2;
+		} else{
+			result = "不支援的運算";
+		};
+
+		alert(result);
+	};
+
+
+
+	
+	</script>
+
+</head>
+<body>
+
+
+</body>
+</html>

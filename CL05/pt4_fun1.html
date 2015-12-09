@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>pt4_fun1</title>
+	<script type="text/javascript">
+
+	var add = function(n1,n2){
+		return n1+n2;
+	}
+	add(5,10); // 變數 add 中裝的資料是一個函式
+	var test = add; // 將 add 的資料轉交給 test
+	test(5,10); // 變數 test 中裝的資料是與 add 相同的函式
+
+	alert("add(5,10) is " + add(5,10));
+	alert("add is " + add);
+
+	alert("test(5,10) is " + test(5,10));
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

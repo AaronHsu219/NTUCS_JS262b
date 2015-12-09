@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>pt9_obj3_lib3</title>
+	
+	<script type="text/javascript" src="lib3.js" ></script>
+	
+	<script type="text/javascript">
+
+	// var player1 = createPlayerObject("彭彭", 100);
+	var player1 = new Player("彭彭", 100);
+	var slime = new Monster("Slime", 1);
+	var dragon = new Monster("Dragon", 20);
+
+	player1.fight(slime);
+	player1.fight(dragon);
+	player1.rest();
+	player1.report();
+
+	// // var player2 = createPlayerObject("丁滿", 90);	
+	// var player2 = new Player("丁滿", 90);
+	// player2.fight(5);
+	// player2.rest();
+	// player2.report();
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>
+

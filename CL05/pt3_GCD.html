@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>pt3_GCD</title>
+	<script type="text/javascript">
+
+	var iFirstNumber = Number(prompt("請輸入第一個數字:"));
+	var iSecondNumber = Number(prompt("請輸入第二個數字:"));
+	var iGCD;
+	var iRemainder;
+
+
+	if (iFirstNumber == iSecondNumber)
+	{
+	    iGCD = iFirstNumber;
+	    alert("The GCD of " + iFirstNumber + " and " + iSecondNumber + " is " + iGCD);
+	}
+	else if (iFirstNumber > iSecondNumber)
+	{
+	    iDividend = iFirstNumber;
+	    iDivisor = iSecondNumber;
+	}
+	else
+	{
+	    iDividend = iSecondNumber;
+	    iDivisor = iFirstNumber;
+	}
+
+	iRemainder = iDividend % iDivisor;
+	
+	while (iRemainder != 0)
+	{
+	    iDividend = iDivisor;
+	    iDivisor = iRemainder;
+	    iRemainder = iDividend % iDivisor;
+	}
+
+	iGCD = iDivisor;
+
+	alert("The GCD of " + iFirstNumber + " and " + iSecondNumber + " is " + iGCD);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
