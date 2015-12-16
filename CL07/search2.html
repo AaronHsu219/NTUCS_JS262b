@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>search2</title>
+	<script type="text/javascript">
+
+	function change(choice) {
+		var page = document.getElementById("page");
+		var img = document.getElementById("img");
+		var btn = document.getElementById("btn");
+		
+		if (choice == 0) {
+			page.style.fontWeight = "bold";
+			page.style.color = "red";
+			img.style.fontWeight = "normal";
+			img.style.color = "black";
+			btn.value = "網頁搜尋";
+		} else {
+			page.style.fontWeight = "normal";
+			page.style.color = "black";
+			img.style.fontWeight = "bold";
+			img.style.color = "red";
+			btn.value = "圖片搜尋";		
+		};
+	}
+
+/*	function changeToPage() {
+		var page = document.getElementById("page");
+		var img = document.getElementById("img");
+		var btn = document.getElementById("btn");
+		page.style.fontWeight = "bold";
+		img.style.fontWeight = "normal";
+		btn.value = "網頁搜尋";
+	}
+
+	function changeToImg() {
+		var page = document.getElementById("page");
+		var img = document.getElementById("img");
+		var btn = document.getElementById("btn");	
+		img.style.fontWeight = "bold";
+		page.style.fontWeight = "normal";
+		btn.value = "圖片搜尋";		
+	}*/
+	</script>
+
+	<style type="text/css">
+			
+	</style>
+
+</head>
+<body>
+<div>
+	<span id="page" onclick="change(0);">網頁</span>
+	<span id="img" onclick="change(1);">圖片</span>
+</div>
+<div>
+	<input type="text" />
+	<input id="btn" type="button" value="網頁搜尋" />	
+</div>
+</body>
+</html>
