@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Event2</title>
+
+	<script type="text/javascript">
+		function over(obj) {
+			obj.style.color="red";
+		}
+
+		function out(obj) {
+			obj.style.color="black";	
+		}
+	</script>
+
+</head>
+
+<body>
+	<span onmouseover="over(this);"
+				onmouseout="out(this);"
+	>
+	Click1
+	</span>
+
+	<span onmouseover="over(this);"
+				onmouseout="out(this);"
+	>
+	Click2
+	</span>
+
+
+
+</body>
+
+</html>

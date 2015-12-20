@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Event6</title>
+
+	<script type="text/javascript">
+
+	function init() {
+			var handler = function(e) {
+				alert(e.clientX + ',' + e.clientY);
+			}
+
+			var btn = document.getElementById("btn");
+			btn.addEventListener("click", handler)		
+	}
+	
+	/*
+		1. 瀏覽器偵測到 click 事件發生
+		2. 瀏覽器自動蒐集事件資訊，並產生事件物件 (Event Object)
+			 var eventObject = 事件物件;
+		3. 瀏覽器呼叫程式設計者提供的事件處理器，並且把 Event Object 透過參數傳入
+		   handler(eventObject)
+	*/
+
+	</script>
+
+</head>
+
+<body onload="init()";>
+
+<button id="btn">Click</button>
+
+</body>
+
+</html>
+
+<!-- <script type="text/javascript">init()</script> -->

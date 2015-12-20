@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tab2</title>
+
+	<script type="text/javascript">
+	/*function change() {
+		var latestTab=document.getElementById("latest");
+		var popularTab=document.getElementById("popular");
+		var latestCon=document.getElementById("latest-con");
+		var popularCon=document.getElementById("popular-con");
+		if (choice==0) {
+			latestTab.style.fontWeight="bold";
+			popularTab.style.fontWeight="normal";
+			latestCon.style.display="block";
+			popularCon.style.display="none";
+		} else {
+
+		};
+	}*/
+
+	var current = 0;	// Global; 追縱當前的選擇
+
+	function change(choice) {
+		// 取得當前的選擇
+		var tab = document.getElementById("tab" + current);
+		var con = document.getElementById("con" + current);
+
+		// 取消當前的選擇
+		tab.style.fontWeight = "normal";
+		con.style.display = "none";
+
+		// ==================================================
+		// 切換到新的選擇
+		current = choice;
+
+		// 處理新的選擇
+		tab = document.getElementById("tab" + current);
+		con = document.getElementById("con" + current);
+		tab.style.fontWeight = "bold";
+		con.style.display = "block";
+	}
+
+	</script>
+
+</head>
+<body>
+<div id="container"> </div>
+
+<!-- <div>
+	<span id="tab0" onclick="change(0)" style="font-weight:bold">New</span>
+	<span id="tab1" onclick="change(1)">Popular</span>	
+	<span id="tab2" onclick="change(2)">Top 10</span>	
+</div>
+
+<hr>
+
+<div id="con0">New Movies</div>
+<div id="con1" style="display:none">Popular Movies</div>
+<div id="con2" style="display:none">Top 10</div> -->
+
+
+</body>
+</html>

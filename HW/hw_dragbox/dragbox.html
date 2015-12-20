@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>box3</title>
+	<script type="text/javascript">
+	
+	var box;
+	var Kx;   // Initial box location x
+	var Ky;   // Initial box location y
+	var x0;   // Initial mouse location x
+	var y0;   // Initial mouse location y
+
+	function init() {		// 網頁靜態內容完全載入後立刻執行
+		box = document.getElementById("box");
+		box.addEventListener("mousedown", pickup); // 點擊時呼叫 pickup				
+	}
+
+	function pickup(e) {	
+		Kx = box.offsetLeft;	// Initialize box location x
+		Ky = box.offsetTop;		// Initialize box location y
+		x0 = e.clientX;				// Initialize mouse location x
+		y0 = e.clientY;				// Initialize mouse location y
+
+		document.addEventListener("mousemove", move);
+		box.removeEventListener("mousedown", pickup);		// 移除 click 處理器 pickup
+		box.addEventListener("mouseup", putdown);				// 新增 click 處理器 putdown
+	}
+
+	function move(e) {			 
+		 box.style.left = (Kx + e.clientX - x0) + "px";
+		 box.style.top = (Ky + e.clientY - y0) + "px";		 		 
+	}
+
+	function putdown() {
+		document.removeEventListener("mousemove", move);	// 不再跟著滑鼠動
+		box.removeEventListener("mouseup", putdown);				// 移除 click 處理器 pickup
+		box.addEventListener("mousedown", pickup);						// 新增 click 處理器 putdown
+	}
+
+	</script>
+
+	<style type="text/css">
+	.box{
+		width: 100px; height:100px; background-color: red;
+		position: absolute; top: 100px; left: 100px;
+	}
+
+	</style>
+
+</head>
+
+<body onload="init();">
+<div class="box" id="box">   </div>
+</body>
+</html>
