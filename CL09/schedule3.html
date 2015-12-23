@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Count Down</title>
+	<script type="text/javascript">
+	/*function init() {
+		window.setTimeout(count, 1000);		
+	}
+
+	function count() {
+		var timeout = document.getElementById("timeout");
+		timeout.innerHTML = timeout.innerHTML - 1;
+		if (timeout.innerHTML > 0) { // 繼續倒數
+			window.setTimeout(count, 1000);					
+		}else{	// 倒數完畢
+			document.location="http://www.google.com";
+		};
+	}*/
+
+	var intervalId;
+
+	function init() {
+		intervalId = window.setInterval(count, 1000);				
+	}
+
+	function count() {
+		var timeout = document.getElementById("timeout");
+		timeout.innerHTML = timeout.innerHTML - 1;
+		if (timeout.innerHTML > 0) { // 繼續倒數
+			// window.setTimeout(count, 1000);					
+		}else{	// 倒數完畢
+			// document.location="http://www.google.com";
+			window.clearInterval(intervalId);
+			alert("Happy Birthday!");
+		}
+	};
+	
+	</script>
+
+</head>
+<body onload="init();">
+倒數 <span id="timeout">3</span> 秒
+</body>
+</html>

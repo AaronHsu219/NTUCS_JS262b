@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Array2</title>
+
+	<script type="text/javascript">
+
+	function init() {
+		var links = document.links;
+		for (var i = 0; i < links.length; i++) {
+				links[i].target = "_blank";
+		};	
+
+		// $("a").attr("target", "_blank");
+	}
+
+	</script>
+
+</head>
+<body onload="init();">
+<ul>
+    <li><a href="http://www.google.com">Google</a></li>
+    <li><a href="http://tw.yahoo.com">Yahoo</a></li>
+</ul>
+</body>
+</html>
