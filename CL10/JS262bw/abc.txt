@@ -1,0 +1,7 @@
+﻿c:\appserv\www\網頁檔案
+http://localhost:8080/網頁檔案
+
+c:\appserv\www\pop.php
+http://localhost:8080/pop.php?city=hsinchu
+http://localhost:8080/pop.php?city=taipei
+http://localhost:8080/pop.php?city=tainan

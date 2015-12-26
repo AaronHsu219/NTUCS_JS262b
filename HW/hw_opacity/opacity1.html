@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Moving Box</title>
+	<script type="text/javascript">
+
+	var box;
+	var x;
+	var animeId;
+
+	function init() {
+		box = document.getElementById("box");
+		x = 100;
+		box.style.left = x + "px";			
+		animeId = window.setInterval(move, 10);
+	}
+
+	var y = 1;					// Initial opacity
+	var inc = 2;				// position increment
+	var opa = 1/250;		// opacity increment
+
+	function move() {
+		x+=inc;	// position change
+		y-=opa;	// opacity change
+	
+		box.style.left = x + "px";			
+		box.style.opacity = y;			// set opacity
+		
+		if (x > 600) {
+			// window.clearInterval(animeId);
+			inc = -inc;
+			opa = -opa;
+		}else if(x < 100){
+			inc = -inc;
+			opa = -opa;
+		};
+	}
+
+	</script>
+
+	<style type="text/css">
+	
+	.box{
+		width: 100px; height: 100px; background-color: red;
+		position:absolute; top: 100px;
+	}
+
+	</style>
+</head>
+<body onload="init();">
+
+<div class="box" id="box"> </div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- This is ajax -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>City3</title>
+	<script type="text/javascript">
+	
+	function getPop(){		
+		// http://localhost:8080/JS262bw/pop.php?city=彈性的
+		var city = document.getElementById("city").value;
+		var url = "http://localhost:8080/JS262bw/pop.php?city=" + city;		
+		// Ajax 網路連線的主程式
+		var req = new XMLHttpRequest();
+		req.open("get", url);
+		req.onload=function(){
+			//alert(this.responseText);
+			var result = document.getElementById("result");
+			result.innerHTML=this.responseText;
+		};
+		req.send();
+	};
+
+	</script>
+
+</head>
+<body>
+	<div>
+		City Population
+		<div>
+			City <input type="text" id="city" />
+			<input type="button" value="Get" onclick="getPop()"/>
+		</div>
+
+		<div id="result"> </div>
+		<!-- form 表單內部，使用submit input 配合運作 -->		
+		<!-- <form action="http://localhost:8080/JS262bw/pop.php">			
+			City <input type="text" name="city" />			
+			<input type="submit" value="Get" />
+		</form> -->
+	</div>
+</body>
+</html>

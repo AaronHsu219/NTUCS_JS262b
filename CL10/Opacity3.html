@@ -1,0 +1,58 @@
+	<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Opacity</title>
+	<script type="text/javascript">
+	// window.addEventListener("load", funciton(){}); 
+		var box;
+		var opacity;
+
+		window.onload = function(){
+			box = document.getElementById("box");
+			opacity = 0.5;
+			box.style.opacity = opacity;
+			box.addEventListener("mouseover", fadeIn); // 滑鼠移入時啟動fadeIn
+			box.addEventListener("mouseout", fadeOut); // 滑鼠移出時啟動fadeOut
+		};
+		
+		var fadeId;
+
+	  // function addFade(element){};
+
+		function fadeIn(){
+				window.clearInterval(fadeId);
+			  fadeId = window.setInterval(function(){
+				opacity += 0.02;
+				box.style.opacity = opacity;
+				
+				if(opacity >= 1){
+					window.clearInterval(fadeId);
+				}
+			}, 25)
+		}
+
+		function fadeOut(){
+				window.clearInterval(fadeId);
+				fadeId = window.setInterval(function(){
+				opacity -= 0.02;
+				box.style.opacity = opacity;
+				
+				if(opacity <= 0){
+					window.clearInterval(fadeId);
+				}
+			}, 25)
+		}
+
+	</script>
+
+
+</head>
+<body>
+
+<div id="box" style="width:100px; height:100px; background-color:red;" / >
+		
+</div>
+
+</body>
+</html>
